@@ -13,15 +13,15 @@
 
     //adiciona funcionários a empresa.
     while ($funcionario = $funcionarios->pegarFuncionario()) {
-        $empresa->addFuncionario($funcionario);
+        $ticketngo->addFuncionario($funcionario);
     }
-    $arFuncionarios = $empresa->getFuncionarios();
+    $arFuncionarios = $ticketngo->getFuncionarios();
 
     //gera a listagem, bom gerar função/método específico.
     $htmlConteudo = '';
     //print_r($arFuncionarios);
     $htmlConteudo = '
-    <legend>Geral</legend>
+    <legend>TicketAndGo</legend>
     <table class="table">
                         <thead>
                             <th>#</th>
@@ -66,7 +66,7 @@
     ";
 
 
-    $pagina = new Pagina('Página 1 - Lista de Funcionários Disponíveis');
+    $pagina = new Pagina('Página 3 - Lista de Funcionários Ticket And Go');
     //$pagina->setNomeUsuario();
     $pagina->setConteudo($htmlConteudo);
     $pagina->mostrar();
